@@ -5,14 +5,12 @@ import "./styles/index.css";
 import setupLoader from "./scripts/loader";
 import headingAnimation from "./scripts/heading";
 import expirenceComp from "./scripts/expirence";
-// import background from "./scripts/background";
 
 async function main() {
-  await setupLoader();
-  // background();
-
+  // await setupLoader();
   headingAnimation();
   expirenceComp();
+  // particles();
 }
 
 main();

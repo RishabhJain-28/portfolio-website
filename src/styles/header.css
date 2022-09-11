@@ -1,0 +1,18 @@
+#hacker_anim_h1 {
+  color: #3e215c;
+  font-family: Consolas, Courier, monospace;
+  /* font-size: 60px; */
+  text-shadow: 0 0 15px #3e215c;
+}
+
+.hacker_anim_glow {
+  color: #7f00ff;
+  text-shadow: 0px 0px 10px #7f00ff;
+  /* color: #f00;
+  text-shadow: 0px 0px 10px #f00; */
+}
+
+span.hacker_anim {
+  display: inline-block;
+  padding: 0 10px;
+}

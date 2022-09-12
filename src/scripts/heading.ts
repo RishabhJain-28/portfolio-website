@@ -1,4 +1,3 @@
-import "../styles/header.css";
 const alphabet = [
   "A",
   "B",

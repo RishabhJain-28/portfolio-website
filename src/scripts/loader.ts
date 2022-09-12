@@ -1,4 +1,3 @@
-import "../styles/laoder.css";
 export default () => {
   const loadingScreen = document.getElementById("loader") as HTMLDivElement;
 

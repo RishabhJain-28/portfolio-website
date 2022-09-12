@@ -2,8 +2,6 @@
   --animation-time: 2s;
 }
 .card {
-  width: 500px;
-  height: 650px;
   border: 1px solid rgba(150, 150, 150, 0.2);
   background: -webkit-linear-gradient(
     top,
@@ -16,7 +14,7 @@
   box-shadow: inset 5px 5px 20px rgba(255, 255, 255, 0.1);
 }
 
-p {
+.pCard {
   margin-top: 0;
   letter-spacing: 2px;
 }

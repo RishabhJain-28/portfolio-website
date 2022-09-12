@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
+  height: 100vh;
+  overflow: hidden;
   background-color: #111;
 }
 .particles-js-canvas-el {
@@ -11,4 +13,34 @@ body {
   position: absolute;
   z-index: 0;
   top: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tag {
+  padding: 20px 0;
+}
+
+.customScroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.customScroll::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  display: none;
+}
+
+.customScroll::-webkit-scrollbar-thumb {
+  background: #7f00ff;
+  border-radius: 100vh;
+}
+
+.customScroll::-webkit-scrollbar-thumb:hover {
+  background: #ad5aff;
+  cursor: grab;
 }

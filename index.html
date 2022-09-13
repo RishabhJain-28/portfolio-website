@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-    <!-- <script src="/src/scripts/particles.js"></script> -->
+    <title>Rishabh Jain</title>
+    <script src="/src/scripts/particles.js"></script>
   </head>
   <body class="text-white relative">
     <!-- <section id="loader">
@@ -29,14 +29,14 @@
 
     <!-- background particles -->
 
-    <!-- <div id="particles-js" class="absolute h-screen w-screen top-0 -z-10"></div> -->
+    <div id="particles-js" class="absolute h-screen w-screen top-0 -z-10"></div>
     <!-- main content  -->
     <div
       id="main"
-      class="flex justify-center h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory customScroll"
+      class="flex justify-center h-screen overflow-y-scroll scroll-smooth snap-y lg:snap-mandatory customScroll"
     >
       <div class="m-2 lg:w-4/5 p-2">
-        <!-- <section class="page header snap-start">
+        <section class="page header snap-start">
           <div id="header" class="text-6xl flex mt-[185px]">
             <div>
               <h1 class="p-[10px]">Hi, myself</h1>
@@ -55,7 +55,7 @@
           <div class="h-[300px]"><h1>SKILLS</h1></div>
         </section>
 
-        <section id="projects" class="page text-4xl snap-start">
+        <!-- <section id="projects" class="page text-4xl snap-start">
           <h1 class="tag">&lt;Projects&gt;</h1>
 
           <div class="mx-10 flex justify-between text-center">
@@ -114,7 +114,7 @@
           <h1 class="tag">&lt;/Projects&gt;</h1>
         </section> -->
 
-        <section id="expirence" class="page my-10 lg:snap-start">
+        <section id="expirence" class="page my-10 snap-start">
           <h1 class="text-[#F8BC85] tag text-4xl">&lt;Expirence&gt;</h1>
           <div class="mx-10 flex justify-center">
             <ol
@@ -209,7 +209,13 @@
 
     <script type="module" src="/src/main.ts"></script>
     <script>
+      // if()
+      // if (window.innerWidth > 1450) {
       // particlesJS.load("particles-js", "particles.json");
+      particlesJS.load("particles-js", "particles_mob.json");
+      // } else {
+      //   particlesJS.load("particles-js", "particles_mob.json");
+      // }
     </script>
   </body>
 </html>

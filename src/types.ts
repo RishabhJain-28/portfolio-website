@@ -10,15 +10,30 @@ export type Expirence = {
 };
 
 export enum TechStack {
-  react = "React",
-  nextjs = "NextJs",
-  graphQL = "GraphQL",
-  js = "javascript",
-  ts = "typescript",
-  redux = "redux",
-  restApi = "REST",
-  nodejs = "NodeJS",
-  tailwind = "Tailwind",
+  React = "React",
+  NextJs = "NextJs",
+  GraphQL = "GraphQL",
+  JavaScript = "JavaScript",
+  TypeScript = "TypeScript",
+  Redux = "Redux",
+  Express = "Express",
+  NodeJS = "NodeJS",
+  Tailwind = "Tailwind",
+  MongoDB = "MongoDB",
+  Postgresql = "Postgresql",
 }
 
-export type {};
+export const teckstackItemImage: Record<keyof typeof TechStack, string> = {
+  React: "/icons/react.svg",
+  JavaScript: "/icons/js.svg",
+  TypeScript: "/icons/typescript.svg",
+  NextJs: "/icons/nextjs.svg",
+  Redux: "/icons/redux.svg",
+  GraphQL: "/icons/graphql.svg",
+  // ts: "/icons/js.svg",
+  MongoDB: "/icons/mongodb.svg",
+  NodeJS: "/icons/nodejs.svg",
+  Tailwind: "/icons/tailwindcss.svg",
+  Express: "/icons/express.svg",
+  Postgresql: "/icons/postgresql.svg",
+};

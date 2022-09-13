@@ -24,6 +24,7 @@ body {
 
 .tag {
   padding: 20px 0;
+  margin: 30px;
 }
 
 .customScroll::-webkit-scrollbar {

@@ -1,4 +1,4 @@
-import { Expirence, TechStack } from "../types";
+import { Expirence, TechStack, teckstackItemImage } from "../types";
 
 const timeline: Expirence[] = [
   {
@@ -12,12 +12,12 @@ const timeline: Expirence[] = [
     to: "June 2022",
     position: "Frontend Developer Intern",
     techStack: [
-      TechStack.ts,
-      TechStack.nextjs,
-      TechStack.react,
-      TechStack.redux,
-      TechStack.graphQL,
-      TechStack.redux,
+      TechStack.TypeScript,
+      TechStack.NextJs,
+      TechStack.React,
+      TechStack.Redux,
+      TechStack.GraphQL,
+      TechStack.Tailwind,
     ],
     link: "https://www.hallparty.app",
     img: [
@@ -35,34 +35,31 @@ const timeline: Expirence[] = [
     to: "May 2021",
     position: "Freelance Web Developer",
     techStack: [
-      TechStack.ts,
-      TechStack.nextjs,
-      TechStack.react,
-      TechStack.redux,
-      TechStack.graphQL,
-      TechStack.redux,
+      TechStack.JavaScript,
+      TechStack.React,
+      TechStack.Express,
+      TechStack.NodeJS,
+      TechStack.MongoDB,
     ],
     link: "",
-    img: ["/project.jpg"],
+    img: [
+      "/timeline/harmony/cl.png",
+      // "/timeline/harmony/coin_0.png",
+      // "/timeline/harmony/coin_1.png",
+      // "/timeline/harmony/coin_2.png",
+    ],
   },
   {
     title: "OWASP Student Chapter",
     bulletPoints: [
-      "Developed frontend applications with responsive UI and integrated new features like messaging, search, onboarding, multi-space authentication, liveface-mojis etc.",
-      "Identified performance bottlenecks and improved code loading and responsiveness.",
-      "Worked with AgoraRTC client to implement videochat and integrated an in-app music player using Spotify",
+      "Led a team of 200 student developers to develop projects and organise events in and for ThaparUniversity.",
+      "Organised and conducted Hackowasp 2.0,Hackowasp 3.0 and Hackowasp 4.0, three iterations of the most celebrated hackathon in Northern India.",
+      " Designed and implemented the full stack webappof Hackowasp’22 and created an integrationpipeline using TravisCI.",
     ],
     from: "October 2019",
     to: "June 2022",
     position: "Joint Secretary",
-    techStack: [
-      TechStack.ts,
-      TechStack.nextjs,
-      TechStack.react,
-      TechStack.redux,
-      TechStack.graphQL,
-      TechStack.redux,
-    ],
+    techStack: [],
     link: "https://owasp.co.in/#events",
     img: ["/p2.png"],
   },
@@ -135,14 +132,14 @@ export default () => {
            : ""
        }
 
-        <div class="my-4 flex">
+        <div class="my-4 flex flex-wrap lg:flex-nowrap  ">
         ${item.techStack.reduce((prev, ele) => {
           return (
             prev +
             `
   
-            <div class="p-2 flex gap-2 items-center transition-all m-2">
-              <img src="/icons/js.svg" class="w-5 h-5" />
+            <div class="lg:p-2  flex  gap-2 items-center transition-all m-2">
+              <img src="${teckstackItemImage[ele]}" class="w-5 h-5" />
               <h1 class="text-gray-400">${ele}</h1>
   
             </div>

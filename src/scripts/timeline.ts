@@ -67,6 +67,7 @@ const timeline: Expirence[] = [
     img: ["/p2.png"],
   },
 ];
+
 let i = 0;
 export default () => {
   const timelineList = document.getElementById("timelineList");
@@ -141,8 +142,8 @@ export default () => {
             `
   
             <div class="p-2 flex gap-2 items-center transition-all m-2">
-            <img src="/icons/js.svg" class="w-5 h-5" />
-            <h1 class="text-gray-400">${ele}</h1>
+              <img src="/icons/js.svg" class="w-5 h-5" />
+              <h1 class="text-gray-400">${ele}</h1>
   
             </div>
             

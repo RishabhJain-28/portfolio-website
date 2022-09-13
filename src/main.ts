@@ -13,9 +13,9 @@ import projects from "./scripts/projects";
 
 async function main() {
   // await setupLoader();
-  headingAnimation();
+  // headingAnimation();
   expirenceComp();
-  projects();
+  // projects();
 }
 
 main();

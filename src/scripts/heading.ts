@@ -36,7 +36,7 @@ const alphabet = [
   "9",
   "0",
 ];
-const ANIMATION_SPEED = 750;
+const ANIMATION_SPEED = 600;
 export default () => {
   let letter_count = 0;
   const headingEl = document.getElementById("hacker_anim_h1") as HTMLDivElement;

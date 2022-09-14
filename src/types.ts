@@ -33,13 +33,13 @@ export enum TechStack {
   Tailwind = "Tailwind",
   MongoDB = "MongoDB",
   Postgresql = "Postgresql",
-  Golang = "Golang",
-  "C++" = "C++",
-  Python = "Python",
-  Git = "Git",
-  p5 = "p5",
-  ThreeJs = "ThreeJs",
-  SocketIO = "SocketIO",
+  // Golang = "Golang",
+  // "C++" = "C++",
+  // Python = "Python",
+  // Git = "Git",
+  // p5 = "p5",
+  // ThreeJs = "ThreeJs",
+  // SocketIO = "SocketIO",
 }
 
 export const teckstackItemImage: Record<keyof typeof TechStack, string> = {

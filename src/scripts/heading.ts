@@ -36,7 +36,7 @@ const alphabet = [
   "9",
   "0",
 ];
-const ANIMATION_SPEED = 600;
+const ANIMATION_TIME = 470;
 export default () => {
   let letter_count = 0;
   const headingEl = document.getElementById("hacker_anim_h1") as HTMLDivElement;
@@ -53,7 +53,7 @@ export default () => {
   }
 
   setTimeout(write, 75);
-  setTimeout(inc, ANIMATION_SPEED);
+  setTimeout(inc, ANIMATION_TIME);
 
   function write() {
     for (var i = letter_count; i < word.length; i++) {
@@ -84,7 +84,7 @@ export default () => {
       finished = true;
       //   setTimeout(reset, 1500);
     } else {
-      setTimeout(inc, ANIMATION_SPEED);
+      setTimeout(inc, ANIMATION_TIME);
     }
   }
 

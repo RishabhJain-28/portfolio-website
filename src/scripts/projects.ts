@@ -1,12 +1,12 @@
 // export default () => {
 //   const projCardsShine = document.querySelectorAll<HTMLDivElement>(".shine");
-const radius = 400; // how big of the radius
+const radius = 470; // how big of the radius
 const autoRotate = true; // auto rotate or not
 const rotateSpeed = -60; // unit: seconds/360 degrees
 const imgWidth = 120; // width of images (unit: px)
 const imgHeight = 170; // height of images (unit: px)
 
-import { Project, TechStack } from "../types";
+import { Project, TechStack, teckstackItemImage } from "../types";
 
 //   projCardsShine.forEach((el: HTMLDivElement) => {
 //     el.style.setProperty("--animation-time", Math.random() * 10 + "s");
@@ -14,16 +14,17 @@ import { Project, TechStack } from "../types";
 // };
 const tproj: Project = {
   title: "Arcadium",
-  bulletPoints: [],
-  description:
-    " Created a completely online monopoly game with features like live player rooms, 3D components integration, chat rooms etc. Also integrated external 3D blender made components with the React based frontend.Technologies used: MERN Stack, ReactThreeJS, SocketJS",
+  bulletPoints: [
+    "ReactThreeJs based Realtime 3D monopoly game with features like live player rooms, 3D components integration, chat rooms etc. ",
+  ],
+  description: "3D coding Monoply",
   img: ["/p2.png"],
   link: "",
   techStack: [TechStack.JavaScript, TechStack.NodeJS, TechStack.React],
   github: "https://github.com/RishabhJain-28/nft-marketplace",
 };
 
-const projects: Project[] = new Array(5).fill(5).map((i) => tproj);
+const projects: Project[] = new Array(5).fill(5).map(() => tproj);
 
 export default () => {
   const projectContainer = document.getElementById("spin-container");
@@ -36,10 +37,10 @@ export default () => {
 
       <img src="/p2.png" alt="" class="rounded-xl" />
                   <div
-                    class="my-4 p-3 rounded-lg bg-[#111] opacity-80 text-white"
+                    class="my-4 p-3    rounded-lg bg-[#111] opacity-80 text-white"
                   >
                   <div class="mb-2 flex justify-between">
-                  <h1 class="text-3xl">Arcadium</h1>
+                  <h1 class="text-3xl">${project.title}</h1>
                   <div class="flex justify-center items-end gap-2">
                   ${
                     project.github
@@ -66,27 +67,26 @@ export default () => {
                     }
                   </div>
                 </div>
-                    <p class="">
-                      Created a completely online monopoly game with features
-                      like live player rooms, 3D components integration, chat
-                      rooms etc. Also integrated external 3D blender made
-                      components with the React based frontend.Technologies
-                      used: MERN Stack, ReactThreeJS, SocketJS
+                <h1 class="m-1 mb-2 text-xl text-gray-400">
+                ${project.description}
+              </h1>
+                    <p class="h-[100px]">
+                    ${project.bulletPoints[0]}
                     </p>
+                   
                     <div class="flex flex-wrap">
+                    ${project.techStack.reduce((prev, ele) => {
+                      return (
+                        prev +
+                        `
                       <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/typescript.svg" class="w-5 h-5" />
-                        <h1 class="">typescript</h1>
+                        <img src="${teckstackItemImage[ele]}" class="w-5 h-5" />
+                        <h1 class="">${ele}</h1>
                       </div>
-                      <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/js.svg" class="w-5 h-5" />
-                        <h1 class="">JavaScript</h1>
-                      </div>
-                      <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/js.svg" class="w-5 h-5" />
-                        <h1 class="">JavaScript</h1>
-                      </div>
-
+                        `
+                      );
+                    }, "")} 
+                  
                     </div>
                   </div>
     
@@ -196,7 +196,7 @@ const animateProjects = () => {
       sY = nY;
     };
 
-    this.onpointerup = function (e) {
+    this.onpointerup = function () {
       odrag.timer = setInterval(function () {
         desX *= 0.95;
         desY *= 0.95;

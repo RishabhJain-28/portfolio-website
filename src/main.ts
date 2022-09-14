@@ -12,8 +12,8 @@ import expirenceComp from "./scripts/timeline";
 import projects from "./scripts/projects";
 
 async function main() {
-  // await setupLoader();
-  // headingAnimation();
+  await setupLoader();
+  headingAnimation();
   projects();
   expirenceComp();
 }

@@ -37,18 +37,18 @@ const copyEmail = () => {
     emailCopyText!.innerText = "copy";
   });
 };
-const copyPhone = () => {
-  const phoneCopyATag = document.getElementById("phoneCopyATag");
-  const phoneCopyText = document.getElementById("phoneCopyText");
+// const copyPhone = () => {
+//   const phoneCopyATag = document.getElementById("phoneCopyATag");
+//   const phoneCopyText = document.getElementById("phoneCopyText");
 
-  phoneCopyATag?.addEventListener("click", () => {
-    navigator.clipboard.writeText(`+91-9953038121`);
+//   phoneCopyATag?.addEventListener("click", () => {
+//     navigator.clipboard.writeText(`+91-9953038121`);
 
-    phoneCopyText!.innerText = "copied!";
-  });
-  phoneCopyATag?.addEventListener("mouseleave", () => {
-    phoneCopyText!.innerText = "copy";
-  });
-};
+//     phoneCopyText!.innerText = "copied!";
+//   });
+//   phoneCopyATag?.addEventListener("mouseleave", () => {
+//     phoneCopyText!.innerText = "copy";
+//   });
+// };
 
 main();

@@ -2,39 +2,43 @@ import { TechStack, teckstackItemImage } from "../types";
 
 const buckets = {
   dev: [
-    TechStack.React,
-    TechStack.NextJs,
-    TechStack.GraphQL,
     TechStack.JavaScript,
     TechStack.TypeScript,
+    TechStack.React,
     TechStack.Redux,
+    TechStack.Tailwind,
+    TechStack.NextJs,
+    TechStack.GraphQL,
     TechStack.Express,
     TechStack.NodeJS,
-    TechStack.Tailwind,
     TechStack.MongoDB,
     TechStack.Postgresql,
   ],
-  misc: [TechStack.Golang, TechStack["C++"], TechStack.Python, TechStack.Git],
+  misc: [TechStack["C++"], TechStack.Golang, , TechStack.Python, TechStack.Git],
   blockchain: [TechStack.Ethereum, TechStack.Solidity, TechStack.Hardhat],
 };
 
 export default () => {
   const skillsDiv = document.getElementById("skills");
 
-  Object.values(TechStack).forEach((ts) => {
-    const div = document.createElement("div");
+  Object.values(buckets)
+    .reduce((prev, curr) => {
+      return [...prev, ...curr];
+    }, [])
+    .forEach((ts) => {
+      const div = document.createElement("div");
 
-    div.className =
-      " p-2  text-lg lg:text-3xl flex  items-center m-2 lg:mr-10  gap-3";
+      div.className =
+        " p-2  text-lg lg:text-3xl flex  items-center m-2 lg:mr-10  gap-3";
 
-    div.innerHTML = `
+      div.innerHTML = `
 
         <img src="${teckstackItemImage[ts]}" class=" w-8 ">
         <h1 class=""> ${ts} </h1>
         `;
 
-    skillsDiv?.appendChild(div);
-  });
+      skillsDiv?.appendChild(div);
+    });
 };
 
 // export default () => {

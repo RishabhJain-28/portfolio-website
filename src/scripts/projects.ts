@@ -95,13 +95,6 @@ export default () => {
 
     projectContainer?.appendChild(divEle);
   });
-  console.log(projectContainer);
-
-  const gitLinkA = document.querySelector<HTMLAnchorElement>(".gitLinkA");
-  gitLinkA?.addEventListener("click", (e) => {
-    console.log("Sda");
-    console.log(e.target);
-  });
 
   animateProjects();
 };

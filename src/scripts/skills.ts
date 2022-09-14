@@ -14,7 +14,7 @@ const buckets = {
     TechStack.MongoDB,
     TechStack.Postgresql,
   ],
-  misc: [TechStack["C++"], TechStack.Golang, , TechStack.Python, TechStack.Git],
+  misc: [TechStack["C++"], TechStack.Golang, TechStack.Python, TechStack.Git],
   blockchain: [TechStack.Ethereum, TechStack.Solidity, TechStack.Hardhat],
 };
 
@@ -33,7 +33,7 @@ export default () => {
 
       div.innerHTML = `
 
-        <img src="${teckstackItemImage[ts as TechStack]}" class=" w-8 ">
+        <img src="${teckstackItemImage[ts]}" class=" w-8 ">
         <h1 class=""> ${ts} </h1>
         `;
 

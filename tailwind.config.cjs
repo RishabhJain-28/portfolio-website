@@ -2,7 +2,8 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: { lg: "1450px" },
+    screens: { lg: "1100px" },
+    // screens: { lg: "1450px" },
 
     extend: {
       animation: {

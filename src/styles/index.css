@@ -45,3 +45,21 @@ body {
   background: #ad5aff;
   cursor: grab;
 }
+
+#photoContainer {
+  left: 999px;
+
+  position: relative;
+  transition: all 2s linear;
+  transform: translateX(-999px);
+}
+
+#resumeBtn {
+  display: inline-block;
+  background: linear-gradient(to left, transparent 50%, #7f00ff 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+#resumeBtn:hover {
+  background-position: left;
+}

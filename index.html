@@ -8,7 +8,7 @@
     <script src="/src/scripts/particles.js"></script>
   </head>
   <body class="text-white relative">
-    <section id="loader">
+    <!-- <section id="loader">
       <div id="laodingScreen" class="laodingScreen">
         <div class="wrap">
           <div class="wall wall-right"></div>
@@ -25,7 +25,7 @@
           <div class="wall wall-back"></div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- background particles -->
 
@@ -43,9 +43,9 @@
         <section class="page header snap-start">
           <div
             id="header"
-            class="text-2xl lg:text-6xl flex mt-[100px] lg:mt-[185px]"
+            class="text-2xl lg:text-6xl flex lg:flex-row flex-col-reverse mt-[100px] lg:mt-[185px]"
           >
-            <div>
+            <div class="lg:mx-10 lg:w-[50%]">
               <h1 class="p-[10px]">Hi, myself</h1>
 
               <h1 class="text-5xl lg:text-8xl mt-[25px]" id="hacker_anim_h1">
@@ -56,8 +56,70 @@
                 enthusixsat<br />A MERN Stack dev and recently beacme block
                 chain enthusixsat
               </p>
+              <p class="my-10 text-base p-[10px]">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Tenetur aperiam architecto accusantium quaerat ducimus incidunt
+                neque eum, earum delectus recusandae debitis explicabo illo
+                voluptatem minus hic corrupti a quam quo.
+              </p>
             </div>
-            <div class="w-[] h-10"></div>
+            <div
+              class="p-2 lg:ml-[100px] w-[300px] lg:w-[600px] overflow-hidden"
+            >
+              <div id="photoContainer">
+                <img src="/assets/me_photo_1.jpg" class="rounded-lg" />
+                <div class="flex my-5 items-center justify-around">
+                  <a
+                    id="resumeBtn"
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1KDPv82os3tHEtoUDAahRs3o6wXBYFaxM/view?usp=sharing"
+                    class="text-lg text-center border-2 border-[#7f00ff] p-2 px-3 rounded-full font-semibold hover:bg-[#7f00ff] hover:text-white"
+                    >Resume</a
+                  >
+                  <a
+                    class="transition-transform hover:scale-[120%]"
+                    target="_blank"
+                    href="https://github.com/rishabhjain-28"
+                    ><img src="/icons/github-64px.png" class="w-10 mx-4"
+                  /></a>
+                  <a
+                    class="transition-transform hover:scale-[120%]"
+                    href="https://www.linkedin.com/in/rishabhjain2851"
+                    target="_blank"
+                    ><img
+                      src="/icons/linkedin.svg"
+                      class="w-10 mx-4 text-white"
+                  /></a>
+
+                  <a class="cursor-pointer relative group" id="emailCopyATag"
+                    ><img
+                      src="/icons/gmail.svg"
+                      class="transition-transform hover:scale-[120%] email icon w-10 mx-4 text-white"
+                    />
+                    <h1
+                      id="emailCopyText"
+                      class="hidden absolute top-[100%] left-1/4 text-base group-hover:block"
+                    >
+                      copy
+                    </h1>
+                  </a>
+                  <a
+                    class="transition-transform hover:scale-[120%] cursor-pointer relative group"
+                    id="phoneCopyATag"
+                    ><img
+                      src="/icons/gmail.svg"
+                      class="email icon w-10 mx-4 text-white"
+                    />
+                    <h1
+                      id="phoneCopyText"
+                      class="hidden absolute top-[100%] left-1/4 text-base group-hover:block"
+                    >
+                      copy
+                    </h1>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="h-[300px]"><h1>SKILLS</h1></div>
         </section>

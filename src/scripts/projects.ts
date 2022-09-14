@@ -6,7 +6,7 @@
 //   });
 // };
 export default () => {
-  var radius = 300; // how big of the radius
+  var radius = 500; // how big of the radius
   var autoRotate = true; // auto rotate or not
   var rotateSpeed = -60; // unit: seconds/360 degrees
   var imgWidth = 120; // width of images (unit: px)
@@ -29,9 +29,10 @@ export default () => {
   };
   const ospin = document.getElementById("spin-container") as HTMLDivElement;
 
-  const aImg = ospin.getElementsByTagName("img");
+  // const aImg = ospin.getElementsByTagName("img");
+  const aImg = ospin.querySelectorAll(".project_container_div");
   const aVid = ospin.getElementsByTagName("video");
-
+  console.log(aImg);
   const aEle = [...aImg, ...aVid];
 
   // Size of images

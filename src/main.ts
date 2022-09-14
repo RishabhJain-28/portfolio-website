@@ -13,12 +13,12 @@ import projects from "./scripts/projects";
 
 async function main() {
   // await setupLoader();
-  headingAnimation();
+  // headingAnimation();
 
   projects();
   expirenceComp();
   copyEmail();
-  copyPhone();
+  // copyPhone();
 }
 
 const copyEmail = () => {

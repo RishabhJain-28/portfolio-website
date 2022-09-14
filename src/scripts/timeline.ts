@@ -61,7 +61,7 @@ const timeline: Expirence[] = [
     position: "Joint Secretary",
     techStack: [],
     link: "https://owasp.co.in/#events",
-    img: ["/p2.png"],
+    img: ["/timeline/owasp/logo.svg"],
   },
 ];
 

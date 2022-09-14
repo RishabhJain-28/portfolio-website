@@ -10,13 +10,16 @@ import setupLoader from "./scripts/loader";
 import headingAnimation from "./scripts/heading";
 import expirenceComp from "./scripts/timeline";
 import projects from "./scripts/projects";
+import skills from "./scripts/skills";
 
 async function main() {
   // await setupLoader();
   // headingAnimation();
 
+  skills();
   projects();
   expirenceComp();
+
   copyEmail();
   // copyPhone();
 }

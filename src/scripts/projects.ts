@@ -1,26 +1,83 @@
 // export default () => {
 //   const projCardsShine = document.querySelectorAll<HTMLDivElement>(".shine");
+const radius = 400; // how big of the radius
+const autoRotate = true; // auto rotate or not
+const rotateSpeed = -60; // unit: seconds/360 degrees
+const imgWidth = 120; // width of images (unit: px)
+const imgHeight = 170; // height of images (unit: px)
+
+import { Project, TechStack } from "../types";
 
 //   projCardsShine.forEach((el: HTMLDivElement) => {
 //     el.style.setProperty("--animation-time", Math.random() * 10 + "s");
 //   });
 // };
-export default () => {
-  var radius = 500; // how big of the radius
-  var autoRotate = true; // auto rotate or not
-  var rotateSpeed = -60; // unit: seconds/360 degrees
-  var imgWidth = 120; // width of images (unit: px)
-  var imgHeight = 170; // height of images (unit: px)
+const tproj: Project = {
+  title: "Arcadium",
+  bulletPoints: [],
+  description:
+    " Created a completely online monopoly game with features like live player rooms, 3D components integration, chat rooms etc. Also integrated external 3D blender made components with the React based frontend.Technologies used: MERN Stack, ReactThreeJS, SocketJS",
+  img: ["/p2.png"],
+  link: "",
+  techStack: [TechStack.JavaScript, TechStack.NodeJS, TechStack.React],
+};
 
+const projects: Project[] = new Array(5).fill(5).map((i) => tproj);
+
+export default () => {
+  const projectContainer = document.getElementById("spin-container");
+
+  projects.forEach((project) => {
+    const divEle = document.createElement("div");
+    divEle.className =
+      "project_container_div text-sm w-[300px] h-[500px] rounded-xl";
+    divEle.innerHTML = `
+
+      <img src="/p2.png" alt="" class="rounded-xl" />
+                  <div
+                    class="my-4 p-3 rounded-lg bg-[#111] opacity-80 text-white"
+                  >
+                    <h1 class="mb-2 text-5xl ">Arcadium</h1>
+                    <p class="">
+                      Created a completely online monopoly game with features
+                      like live player rooms, 3D components integration, chat
+                      rooms etc. Also integrated external 3D blender made
+                      components with the React based frontend.Technologies
+                      used: MERN Stack, ReactThreeJS, SocketJS
+                    </p>
+                    <div class="flex flex-wrap">
+                      <div class="flex gap-2 items-center transition-all m-2">
+                        <img src="/icons/typescript.svg" class="w-5 h-5" />
+                        <h1 class="">typescript</h1>
+                      </div>
+                      <div class="flex gap-2 items-center transition-all m-2">
+                        <img src="/icons/js.svg" class="w-5 h-5" />
+                        <h1 class="">JavaScript</h1>
+                      </div>
+                      <div class="flex gap-2 items-center transition-all m-2">
+                        <img src="/icons/js.svg" class="w-5 h-5" />
+                        <h1 class="">JavaScript</h1>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+    `;
+
+    projectContainer?.appendChild(divEle);
+  });
+  console.log(projectContainer);
+
+  animateProjects();
+};
+
+const animateProjects = () => {
   /*
      NOTE:
        + imgWidth, imgHeight will work for video
        + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
-       + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-       + Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
 */
 
-  // ===================== start =======================
   // animation start after 1000 miliseconds
   setTimeout(init, 1000);
 
@@ -29,17 +86,15 @@ export default () => {
   };
   const ospin = document.getElementById("spin-container") as HTMLDivElement;
 
-  // const aImg = ospin.getElementsByTagName("img");
-  const aImg = ospin.querySelectorAll(".project_container_div");
-  const aVid = ospin.getElementsByTagName("video");
+  const aImg = ospin.querySelectorAll<HTMLDivElement>(".project_container_div");
   console.log(aImg);
-  const aEle = [...aImg, ...aVid];
+  // @ts-ignore
+  const aEle = [...aImg];
 
   // Size of images
   ospin.style.width = imgWidth + "px";
   ospin.style.height = imgHeight + "px";
 
-  // Size of ground - depend on radius
   const ground = document.getElementById("ground");
   if (!ground) {
     throw new Error("[project animations] ground container not found");

@@ -13,8 +13,8 @@ import projects from "./scripts/projects";
 import skills from "./scripts/skills";
 
 async function main() {
-  // await setupLoader();
-  // headingAnimation();
+  await setupLoader();
+  headingAnimation();
 
   skills();
   projects();

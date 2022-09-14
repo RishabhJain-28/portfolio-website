@@ -48,10 +48,18 @@ body {
 
 #photoContainer {
   left: 999px;
-
   position: relative;
-  transition: all 2s linear;
-  transform: translateX(-999px);
+  animation: slideIn 2s normal 2s 1 forwards;
+  /* animation: alternate; */
+}
+
+@keyframes slideIn {
+  from {
+  }
+  to {
+    /* transition: all 2s linear; */
+    transform: translateX(-999px);
+  }
 }
 
 #resumeBtn {

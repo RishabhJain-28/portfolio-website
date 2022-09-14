@@ -29,14 +29,18 @@
 
     <!-- background particles -->
 
-    <div id="particles-js" class="absolute h-screen w-screen top-0 -z-10"></div>
+    <!-- <div id="particles-js" class="absolute h-screen w-screen top-0 -z-10"></div> -->
     <!-- main content  -->
-    <div
+    <!-- <div
       id="main"
       class="flex justify-center h-screen overflow-y-scroll scroll-smooth lg:snap-y lg:snap-mandatory customScroll"
+    > -->
+    <div
+      id="main"
+      class="flex justify-center h-screen overflow-y-scroll scroll-smooth customScroll"
     >
       <div class="m-2 lg:w-4/5 p-2">
-        <section class="page header snap-start">
+        <!-- <section class="page header snap-start">
           <div
             id="header"
             class="text-2xl lg:text-6xl flex mt-[100px] lg:mt-[185px]"
@@ -56,7 +60,7 @@
             <div class="w-[] h-10"></div>
           </div>
           <div class="h-[300px]"><h1>SKILLS</h1></div>
-        </section>
+        </section> -->
 
         <!-- <section id="projects" class="page text-4xl snap-start">
           <h1 class="tag">&lt;Projects&gt;</h1>
@@ -141,7 +145,55 @@
         <section id="projects" class="page text-4xl snap-start">
           <h1 class="tag text-[#11E2FF]">&lt;Projects&gt;</h1>
 
-          <div class="mx-20 text-xl"></div>
+          <div class="mx-20 text-xl testt h-[600px]">
+            <div id="drag-container">
+              <div id="spin-container">
+                <!-- Add your images (or video) here -->
+                <img
+                  src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+                <img
+                  src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                />
+
+                <!-- Example add video  -->
+                <video controls autoplay="autoplay" loop>
+                  <source
+                    src="https://player.vimeo.com/external/322244668.sd.mp4?s=338c48ac2dfcb1d4c0689968b5baf94eee6ca0c1&profile_id=165&oauth2_token_id=57447761"
+                    type="video/mp4"
+                  />
+                </video>
+
+                <!-- Text at center of ground -->
+                <p>3D Tiktok Carousel</p>
+              </div>
+              <div id="ground"></div>
+            </div>
+
+            <div id="music-container"></div>
+          </div>
           <h1 class="tag">&lt;/Projects&gt;</h1>
         </section>
         <section id="expirence" class="page my-10 snap-start">
@@ -242,7 +294,7 @@
       // if()
       // if (window.innerWidth > 1450) {
       // particlesJS.load("particles-js", "particles.json");
-      particlesJS.load("particles-js", "particles_mob.json");
+      // particlesJS.load("particles-js", "particles_mob.json");
       // } else {
       //   particlesJS.load("particles-js", "particles_mob.json");
       // }

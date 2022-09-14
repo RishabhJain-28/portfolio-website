@@ -18,6 +18,7 @@ export type Project = {
   techStack: TechStack[];
   link: string;
   img: string[];
+  github: string;
 };
 
 export enum TechStack {

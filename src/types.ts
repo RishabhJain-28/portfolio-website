@@ -11,8 +11,6 @@ export type Expirence = {
 
 export type Project = {
   title: string;
-  // from: string;
-  // to: string;
   description: string;
   bulletPoints: string[];
   techStack: TechStack[];
@@ -27,6 +25,9 @@ export enum TechStack {
   GraphQL = "GraphQL",
   JavaScript = "JavaScript",
   TypeScript = "TypeScript",
+  HTML = "HTML",
+  CSS = "CSS",
+  Gatsby = "Gatsby",
   Redux = "Redux",
   Express = "Express",
   NodeJS = "NodeJS",
@@ -40,6 +41,7 @@ export enum TechStack {
   Ethereum = "Ethereum",
   Solidity = "Solidity",
   Hardhat = "Hardhat",
+  Docker = "Docker",
   // p5 = "p5",
   // ThreeJs = "ThreeJs",
   // SocketIO = "SocketIO",
@@ -64,4 +66,8 @@ export const teckstackItemImage: Record<keyof typeof TechStack, string> = {
   Solidity: "/icons/solidity.svg",
   Hardhat: "/icons/hardhat.svg",
   Git: "/icons/git.svg",
+  HTML: "/icons/html.svg",
+  CSS: "/icons/css.svg",
+  Docker: "/icons/docker.png",
+  Gatsby: "/icons/gatsby.svg",
 };

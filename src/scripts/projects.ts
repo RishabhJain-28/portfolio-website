@@ -12,19 +12,85 @@ import { Project, TechStack, teckstackItemImage } from "../types";
 //     el.style.setProperty("--animation-time", Math.random() * 10 + "s");
 //   });
 // };
-const tproj: Project = {
-  title: "Arcadium",
-  bulletPoints: [
-    "ReactThreeJs based Realtime 3D monopoly game with features like live player rooms, 3D components integration, chat rooms etc. ",
-  ],
-  description: "3D coding Monoply",
-  img: ["/p2.png"],
-  link: "",
-  techStack: [TechStack.JavaScript, TechStack.NodeJS, TechStack.React],
-  github: "https://github.com/RishabhJain-28/nft-marketplace",
-};
+// const tproj: Project = {
+//   title: "Arcadium",
+//   bulletPoints: [
+//     "ReactThreeJs based Realtime 3D monopoly game with features like live player rooms, 3D components integration, chat rooms etc. ",
+//   ],
+//   description: "3D coding Monoply",
+//   img: ["/p2.png"],
+//   link: "",
+//   techStack: [TechStack.JavaScript, TechStack.NodeJS, TechStack.React],
+//   github: "https://github.com/RishabhJain-28/nft-marketplace",
+// };
 
-const projects: Project[] = new Array(5).fill(5).map(() => tproj);
+// const projects: Project[] = new Array(5).fill(5).map(() => tproj);
+
+const projects: Project[] = [
+  {
+    // ● Technologies used: ReactJS, ExpressJS,SupabaseDb,
+    // SaltStack, c#, win32 API,bash
+    title: "BOLT",
+    bulletPoints: [
+      "Bolt is a system that tracks applications installed on minion workstations and allows admin to remotely uninstall unwanted softwares, execute terminal commands and log the user out.",
+    ],
+    description: "Master-Minion Configuration Management tool ",
+    img: ["/projects/bolt.png"],
+    link: "",
+    techStack: [
+      TechStack.Electron,
+      TechStack.React,
+      TechStack.AntDesign,
+      TechStack.NodeJS,
+      TechStack.Express,
+      TechStack.SupabaseDB,
+      TechStack.Docker,
+      TechStack.Bash,
+      TechStack.Win32APIs,
+      TechStack.Linux,
+      TechStack.SaltStack,
+    ],
+    github: "https://github.com/Altas-Bolt",
+  },
+  {
+    title: "NFT Galaxy",
+    bulletPoints: [
+      "A platform to buy, create and sell NFTs on Polygon’s Proof of Stake chain.",
+    ],
+    description: "NFT Marketplace",
+    img: ["/projects/nftGalaxy.png"],
+    link: "https://nft-marketplace-umber.vercel.app/",
+    techStack: [
+      TechStack.Solidity,
+      TechStack.Polygon,
+      TechStack.Hardhat,
+      TechStack.IPFS,
+      TechStack.JavaScript,
+      TechStack.NextJs,
+      TechStack.Tailwind,
+    ],
+    github: "https://github.com/RishabhJain-28/nft-marketplace",
+  },
+  {
+    title: "Arcadium",
+    bulletPoints: [
+      "ReactThreeJs based Realtime 3D monopoly game with features like live player rooms, 3D components integration, chat rooms etc. ",
+    ],
+    description: "3D coding Monoply",
+    img: ["/projects/arcadium.png"],
+    link: "",
+    techStack: [
+      TechStack.JavaScript,
+      TechStack.ThreeJs,
+      TechStack.React,
+      TechStack.NodeJS,
+      TechStack.MongoDB,
+      TechStack.Express,
+      TechStack.SocketIO,
+    ],
+    github: "https://github.com/OWASP-STUDENT-CHAPTER/arcadium",
+  },
+];
 
 export default () => {
   const projectContainer = document.getElementById("spin-container");
@@ -32,12 +98,12 @@ export default () => {
   projects.forEach((project) => {
     const divEle = document.createElement("div");
     divEle.className =
-      "project_container_div text-sm w-[300px] h-[500px] rounded-xl";
+      "project_container_div text-sm w-[300px] h-[500px] rounded-xl   ";
     divEle.innerHTML = `
 
-      <img src="${project.img[0]}" alt="" class="rounded-xl" />
+      <img src="${project.img[0]}" alt="" class="rounded-xl " />
                   <div
-                    class="my-4 p-3    rounded-lg bg-[#111] opacity-80 text-white"
+                    class="my-4 p-3    rounded-lg bg-[#111] opacity-80 text-white max-h-[320px] overflow-y-auto customScroll "
                   >
                   <div class="mb-2 flex justify-between">
                   <h1 class="text-3xl">${project.title}</h1>
@@ -67,14 +133,14 @@ export default () => {
                     }
                   </div>
                 </div>
-                <h1 class="m-1 mb-2 text-xl text-gray-400">
+                <h1 class="m-1 mb-2 text-lg text-gray-400">
                 ${project.description}
               </h1>
                     <p class="h-[100px]">
                     ${project.bulletPoints[0]}
                     </p>
                    
-                    <div class="flex flex-wrap">
+                    <div class="flex flex-wrap  ">
                     ${project.techStack.reduce((prev, ele) => {
                       return (
                         prev +

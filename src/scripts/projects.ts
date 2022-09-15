@@ -35,7 +35,7 @@ export default () => {
       "project_container_div text-sm w-[300px] h-[500px] rounded-xl";
     divEle.innerHTML = `
 
-      <img src="/p2.png" alt="" class="rounded-xl" />
+      <img src="${project.img[0]}" alt="" class="rounded-xl" />
                   <div
                     class="my-4 p-3    rounded-lg bg-[#111] opacity-80 text-white"
                   >

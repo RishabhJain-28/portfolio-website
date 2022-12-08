@@ -47,8 +47,13 @@ export default () => {
 
   for (var i = 0; i < word.length; i++) {
     const el = document.createElement("span");
+
     el.innerText = word.charAt(i);
     el.classList.add("hacker_anim");
+
+    // el.className =
+    //   "text-7xl mob:text-[13vw] lg:text-[4vw] desktop:text-[5vw]"
+    // ;
     headingEl.append(el);
   }
 
@@ -57,11 +62,11 @@ export default () => {
 
   function write() {
     for (var i = letter_count; i < word.length; i++) {
-      if (word[i] == " ") continue;
-
       var c = Math.floor(Math.random() * 36);
       const a = document.querySelectorAll<HTMLSpanElement>("span.hacker_anim");
-
+      if (a[i].innerHTML == " ") {
+        continue;
+      }
       a[i].innerHTML = alphabet[c];
     }
     if (!finished) {
@@ -73,7 +78,15 @@ export default () => {
     document.querySelectorAll<HTMLSpanElement>("span.hacker_anim")[
       letter_count
     ].innerHTML = word[letter_count];
+
+    // if (word[letter_count] == " ") {
+    // document.querySelector<HTMLSpanElement>(
+    //   "span.hacker_anim:nth-child(" + letter_count + 1 + ")"
+    // )!.style.marginRight = "100px";
+    // }
+
     letter_count++;
+
     document
       .querySelector<HTMLSpanElement>(
         "span.hacker_anim:nth-child(" + letter_count + ")"

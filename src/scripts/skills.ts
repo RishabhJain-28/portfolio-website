@@ -36,50 +36,23 @@ export default () => {
     }, [])
     .forEach((ts) => {
       const div = document.createElement("div");
+      const show = () => {
+        const tag = div.getElementsByTagName("h1")[0];
+        tag.className = "block";
 
-      div.className =
-        " p-2  text-lg lg:text-3xl flex  items-center m-2 lg:mr-10  gap-3";
+        setTimeout(() => {
+          tag.className = "tab:hidden";
+        }, 2000);
+      };
+      div.addEventListener("click", show);
+
+      div.className = `cursor-pointer w-17 border-white rounded-full p-2 px-4 flex items-center m-2 text-xl xlscreen:text-3xl gap-3`;
 
       div.innerHTML = `
-
-        <img src="${teckstackItemImage[ts]}" class=" w-8 ">
-        <h1 class=""> ${ts} </h1>
+        <img src="${teckstackItemImage[ts]}" class=" lg:w-8 w-7 ">
+        <h1 class="tab:hidden">${ts}</h1>
         `;
 
       skillsDiv?.appendChild(div);
     });
 };
-
-// export default () => {
-//   const skillsDiv = document.getElementById("skills");
-//   const a = Object.values(buckets);
-//   a.forEach((b) => {
-//     const bucketDiv = document.createElement("div");
-
-//     bucketDiv.className = `flex flex-col flex-wrap p-2 m-2`;
-//     bucketDiv.style.width = `${Math.floor(100 / a.length)}%`;
-
-//     b.forEach((ts) => {
-//       const div = document.createElement("div");
-//       div.className = " flex justify-center items-center m-2 p-2 gap-2";
-
-//       div.innerHTML = `
-//             <img src="${teckstackItemImage[ts]}" class=" w-8 ">
-//             <h1 class=""> ${ts} </h1>
-//         `;
-//       bucketDiv.appendChild(div);
-//     });
-//     skillsDiv!.appendChild(bucketDiv);
-//   });
-
-//   Object.values(TechStack).forEach((ts) => {
-//     div.innerHTML = `
-//         <div class="flex justify-center items-center">
-//             <img src= "${teckstackItemImage[ts]}" class=" w-8 ">
-//             <h1 class=""> ${ts} </h1>
-//         </div>
-//         `;
-
-//     skillsDiv?.appendChild(div);
-//   });
-// };

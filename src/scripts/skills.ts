@@ -62,7 +62,7 @@ export default () => {
       div.className = `tab:cursor-pointer w-17 border-white rounded-full p-2 px-4 flex items-center m-2 text-xl xlscreen:text-3xl gap-3`;
 
       div.innerHTML = `
-        <img src="${teckstackItemImage[ts]}" class=" lg:w-8 w-7 ">
+        <img src="${teckstackItemImage[ts]}" class=" lg:w-10 w-7 ">
         <h1 class=" tab:hidden">${ts}</h1>
         `;
       skillsDiv?.appendChild(div);

@@ -1,5 +1,4 @@
 export default () => {
-  return;
   const loadingScreen = document.getElementById("loader") as HTMLDivElement;
 
   return new Promise((resolve) => {

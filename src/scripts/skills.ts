@@ -19,6 +19,7 @@ const buckets = {
   ],
   misc: [
     TechStack["C++"],
+    TechStack.Rust,
     TechStack.Golang,
     TechStack.Python,
     TechStack.Git,

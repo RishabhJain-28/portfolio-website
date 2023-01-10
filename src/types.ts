@@ -53,6 +53,7 @@ export enum TechStack {
   SaltStack = "SaltStack",
   Polygon = "Polygon",
   IPFS = "IPFS",
+  Rust = "Rust",
   // p5 = "p5",
   // ThreeJs = "ThreeJs",
   // SocketIO = "SocketIO",
@@ -92,4 +93,5 @@ export const teckstackItemImage: Record<keyof typeof TechStack, string> = {
   SaltStack: "/icons/saltstack.svg",
   Polygon: "/icons/polygon.svg",
   IPFS: "/icons/ipfs.png",
+  Rust: "/icons/rust.svg",
 };

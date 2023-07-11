@@ -2,6 +2,26 @@ import { Expirence, TechStack, teckstackItemImage } from "../types";
 
 const timeline: Expirence[] = [
   {
+    title: "Payu payments",
+    from: "January 2023",
+    to: "July 2023",
+    techStack: [
+      TechStack.Burpsuite,
+      TechStack.Postman,
+      TechStack["Owasp Top 10"],
+      TechStack.Nmap,
+      TechStack.Fortify,
+    ],
+    link: "https://payu.in/",
+    position: "Cyber Defence Analyst Intern",
+    img: ["/timeline/Payu/logo.png"],
+    bulletPoints: [
+      "Performed Source Code Review and Application Security Review for more than 200 tickets",
+      "Implemented SSH Key Management solution using Hashicorp Vault",
+      "Streamlined the SCR process by automating the git diffs download flow",
+    ],
+  },
+  {
     title: "Hallparty",
     bulletPoints: [
       "Developed frontend applications with responsive UI and integrated new features like messaging, search, onboarding, multi-space authentication, liveface-mojis etc.",

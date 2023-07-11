@@ -26,6 +26,13 @@ const buckets = {
     TechStack.Docker,
   ],
   blockchain: [TechStack.Ethereum, TechStack.Solidity, TechStack.Hardhat],
+  cyber: [
+    TechStack.Burpsuite,
+    TechStack.Postman,
+    TechStack["Owasp Top 10"],
+    TechStack.Nmap,
+    TechStack.Fortify,
+  ],
 };
 
 export default () => {

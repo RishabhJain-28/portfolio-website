@@ -1,5 +1,3 @@
-// export default () => {
-//   const projCardsShine = document.querySelectorAll<HTMLDivElement>(".shine");
 const radius = 470; // how big of the radius
 const autoRotate = true; // auto rotate or not
 const rotateSpeed = -60; // unit: seconds/360 degrees
@@ -8,25 +6,21 @@ const imgHeight = 170; // height of images (unit: px)
 
 import { Project, TechStack, teckstackItemImage } from "../types";
 
-//   projCardsShine.forEach((el: HTMLDivElement) => {
-//     el.style.setProperty("--animation-time", Math.random() * 10 + "s");
-//   });
-// };
-// const tproj: Project = {
-//   title: "Arcadium",
-//   bulletPoints: [
-//     "ReactThreeJs based Realtime 3D monopoly game with features like live player rooms, 3D components integration, chat rooms etc. ",
-//   ],
-//   description: "3D coding Monoply",
-//   img: ["/p2.png"],
-//   link: "",
-//   techStack: [TechStack.JavaScript, TechStack.NodeJS, TechStack.React],
-//   github: "https://github.com/RishabhJain-28/nft-marketplace",
-// };
-
-// const projects: Project[] = new Array(5).fill(5).map(() => tproj);
-
 const projects: Project[] = [
+  {
+    // ● Technologies used: ReactJS, ExpressJS,SupabaseDb,
+    // SaltStack, c#, win32 API,bash
+    title: "AutoBot",
+    bulletPoints: [
+      "Autobot is a extensible scripting language that allows you to make shortcuts and other automation workflows quickly",
+      "has REPL, transpile and interpreter modes of operation",
+    ],
+    description: "Rust based scripting language",
+    img: ["/projects/autobot.png"],
+    link: "",
+    techStack: [TechStack.Rust],
+    github: "https://github.com/RishabhJain-28/autobot",
+  },
   {
     // ● Technologies used: ReactJS, ExpressJS,SupabaseDb,
     // SaltStack, c#, win32 API,bash
@@ -93,6 +87,10 @@ const projects: Project[] = [
 ];
 
 export default () => {
+  animatedPatformProjectsdisplay();
+};
+
+const animatedPatformProjectsdisplay = () => {
   const projectContainer = document.getElementById("spin-container");
 
   projects.forEach((project) => {
@@ -103,7 +101,7 @@ export default () => {
 
       <img src="${project.img[0]}" alt="" class="rounded-xl " />
                   <div
-                    class="my-4 p-3    rounded-lg bg-[#111] opacity-80 text-white max-h-[320px] overflow-y-auto customScroll "
+                    class="my-4 p-3 h-full  flex flex-col  rounded-lg bg-[#111] opacity-80 text-white max-h-[320px] overflow-y-auto customScroll "
                   >
                   <div class="mb-2 flex justify-between">
                   <h1 class="text-3xl">${project.title}</h1>
@@ -140,7 +138,7 @@ export default () => {
                     ${project.bulletPoints[0]}
                     </p>
                    
-                    <div class="flex flex-wrap  ">
+                    <div class="flex flex-wrap ">
                     ${project.techStack.reduce((prev, ele) => {
                       return (
                         prev +
@@ -164,7 +162,6 @@ export default () => {
 
   animateProjects();
 };
-
 const animateProjects = () => {
   /*
      NOTE:

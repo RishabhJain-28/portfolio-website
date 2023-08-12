@@ -12,6 +12,9 @@ module.exports = {
     // screens: { lg: "1450px" },
 
     extend: {
+      colors: {
+        "main-purple": "#7f00ff",
+      },
       animation: {
         fade: "fadeOut 10s ease-in-out infinite",
       },

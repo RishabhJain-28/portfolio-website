@@ -62,12 +62,12 @@ body {
   }
 }
 
-#resumeBtn {
+.resumeBtn {
   display: inline-block;
   background: linear-gradient(to left, transparent 50%, #7f00ff 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
 }
-#resumeBtn:hover {
+.resumeBtn:hover {
   background-position: left;
 }

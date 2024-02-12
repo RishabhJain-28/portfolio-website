@@ -12,7 +12,8 @@ const timeline: Expirence[] = [
       TechStack.Nmap,
       TechStack.Fortify,
     ],
-    link: "https://payu.in/",
+    link: "",
+    // link: "https://payu.in/",
     position: "Cyber Defence Analyst Intern",
     img: ["/timeline/Payu/logo.png"],
     bulletPoints: [
@@ -39,10 +40,11 @@ const timeline: Expirence[] = [
       TechStack.GraphQL,
       TechStack.Tailwind,
     ],
-    link: "https://www.hallparty.app",
+    link: "",
+    // link: "https://www.hallparty.app",
     img: [
       "/timeline/hallparty/homepage.png",
-      "/timeline/hallparty/landing.png",
+      // "/timeline/hallparty/landing.png",
     ],
   },
   {
@@ -80,7 +82,8 @@ const timeline: Expirence[] = [
     to: "June 2022",
     position: "Joint Secretary",
     techStack: [],
-    link: "https://owasp.co.in/#events",
+    // link: "https://owasp.co.in/#events",
+    link: "",
     img: ["/timeline/owasp/logo.svg"],
   },
 ];

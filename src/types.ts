@@ -59,6 +59,8 @@ export enum TechStack {
   "Owasp Top 10" = "Owasp Top 10",
   Nmap = "Nmap",
   Fortify = "Fortify",
+  MaterialUI = "MaterialUI",
+  NestJs = "NestJs",
   // p5 = "p5",
   // ThreeJs = "ThreeJs",
   // SocketIO = "SocketIO",
@@ -104,4 +106,6 @@ export const teckstackItemImage: Record<keyof typeof TechStack, string> = {
   Postman: "/icons/postman.svg",
   Nmap: "/icons/nmap.svg",
   Fortify: "/icons/fortify.jpg",
+  MaterialUI: "/icons/materialUI.svg",
+  NestJs: "/icons/NestJS.png",
 };

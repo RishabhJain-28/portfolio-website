@@ -2,6 +2,33 @@ import { Expirence, TechStack, teckstackItemImage } from "../types";
 
 const timeline: Expirence[] = [
   {
+    title: "Skuad",
+    position: "Fullstack Developer",
+    from: "July 2023",
+    to: "Present",
+    bulletPoints: [
+      "Responsible for the frontend of the Help Request ticketing system using React, Material-UI and Sendbird.",
+      "Found workarounds for features without native support from Sendbird, like rich text editing and a separate tab for tagged users.",
+      "Initiated and spearheaded the development of the mobile app for the Help Request using React Native.",
+      "Developed a service worker enabling notifications across multiple tabs through a single socket connection.",
+      "Integrated Product Fruits for user tours, resulting in an enhanced overall user experience",
+      "Created GraphQL APIs for Help Request using nest.js and mongoDB.",
+    ],
+    img: ["/timeline/skuad/skuad.png"],
+    link: "https://www.skuad.io",
+    techStack: [
+      TechStack.React,
+      TechStack.TypeScript,
+      TechStack.MaterialUI,
+      TechStack.Redux,
+      TechStack.NestJs,
+      TechStack.NodeJS,
+      TechStack.MongoDB,
+      TechStack.Postgresql,
+      TechStack.Git,
+    ],
+  },
+  {
     title: "Payu payments",
     from: "January 2023",
     to: "July 2023",
@@ -155,7 +182,7 @@ export default () => {
            : ""
        }
 
-        <div class="my-4 flex flex-wrap lg:flex-nowrap  ">
+        <div class="my-4 flex flex-wrap   ">
         ${item.techStack.reduce((prev, ele) => {
           return (
             prev +

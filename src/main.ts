@@ -3,17 +3,19 @@ import "./styles/header.css";
 import "./styles/loader.css";
 import "./styles/projects.css";
 
-import setupLoader from "./scripts/loader";
+// import completeLoader from "./scripts/loader";
 import headingAnimation from "./scripts/heading";
 import expirenceComp from "./scripts/timeline";
-import projects from "./scripts/projects";
+// import projects from "./scripts/projects";
 import skills from "./scripts/skills";
+import project_spline from "./scripts/projects_spline";
 
 async function main() {
-  await setupLoader();
+  // await setupLoader();
+  await project_spline();
+  // await completeLoader();
   headingAnimation();
   skills();
-  projects();
   expirenceComp();
   copyEmail();
 }

@@ -1,28 +1,13 @@
 <!DOCTYPE html>
-<!-- <a
-                    class="transition-transform hover:scale-[120%] cursor-pointer relative group"
-                    id="phoneCopyATag"
-                    ><img
-                      src="/icons/gmail.svg"
-                      class="email icon w-10 mx-4 text-white"
-                    />
-                    <h1
-                      id="phoneCopyText"
-                      class="hidden absolute top-[100%] left-1/4 text-base group-hover:block"
-                    >
-                      copy
-                    </h1>
-                  </a> -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="preload" href="/projects/scene.splinecode" as="fetch" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rishabh Jain</title>
     <script src="/assets/particles.js"></script>
   </head>
   <body class="text-white relative">
-    <section id="loader">
+    <!-- <section id="loader">
       <div id="laodingScreen" class="laodingScreen">
         <div class="wrap">
           <div class="wall wall-right"></div>
@@ -39,17 +24,11 @@
           <div class="wall wall-back"></div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- background particles -->
 
     <div id="particles-js" class="absolute h-screen w-screen top-0 -z-10"></div>
-    <!-- main content  -->
-    <!-- <div
-      id="main"
-      class="flex justify-center h-screen overflow-y-scroll scroll-smooth lg:snap-y lg:snap-mandatory customScroll"
-    > -->
-
     <div
       id="main"
       class="h-screen overflow-y-scroll scroll-smooth customScroll"
@@ -145,71 +124,7 @@
             </h1>
 
             <div class="lg:mx-20 text-xl testt h-[1000px]">
-              <div id="drag-container" class="-top-[20%] font-semibold">
-                <div id="spin-container">
-                  <!-- <div
-                  class="project_container_div text-sm w-[300px] h-[500px] rounded-xl"
-                >
-                  <img src="/p2.png" alt="" class="rounded-xl" />
-                  <div
-                    class="my-4 p-2 rounded-lg bg-[#111] opacity-80 text-white"
-                  >
-                    <div class="flex justify-between">
-                      <h1 class="text-3xl">Arcadium</h1>
-                      <div class="flex justify-center items-end gap-2">
-                        <a
-                          target="_blank"
-                          class="gitLinkA mb-1"
-                          href="https://github.com/RishabhJain-28/nft-marketplace"
-                        >
-                          <img class="w-4" src="/icons/github-64px.png" />
-                        </a>
-                        <a
-                          target="_blank"
-                          class="mb-1 text-white"
-                          href="https://github.com/RishabhJain-28/nft-marketplace"
-                        >
-                          <img class="w-4" src="/icons/link.svg" />
-                        </a>
-                      </div>
-                    </div>
-                    <h1 class="m-1 mb-2 text-xl text-gray-400">
-                      #D MONOPLY game
-                    </h1>
-
-                    <p class="">
-                      Created a completely online monopoly game with features
-                      like live player rooms, 3D components integration, chat
-                      rooms etc. Also integrated external 3D blender made
-                      components with the React based frontend.Technologies
-                      used: MERN Stack, ReactThreeJS, SocketJS
-                    </p>
-                    <div class="flex flex-wrap">
-                      <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/typescript.svg" class="w-5 h-5" />
-                        <h1 class="">typescript</h1>
-                      </div>
-                      <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/js.svg" class="w-5 h-5" />
-                        <h1 class="">JavaScript</h1>
-                      </div>
-                      <div class="flex gap-2 items-center transition-all m-2">
-                        <img src="/icons/js.svg" class="w-5 h-5" />
-                        <h1 class="">JavaScript</h1>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
-                  <!-- Text at center of ground -->
-                  <p class="projects_text_desc">
-                    <!-- THIS IS A DISCRPITON OF THE PROJETCS -->
-                  </p>
-                </div>
-                <div id="ground"></div>
-              </div>
-
-              <div id="music-container"></div>
+              <canvas id="canvas3d" />
             </div>
             <h1 class="tag absolute bottom-10 z-10 text-[#11E2FF]">
               &lt;/Projects&gt;
@@ -313,8 +228,6 @@
         class="m-2 rounded-lg p-10 text-clack bg-transparent backdrop-blur-sm"
       >
         <div class="opacity-100">
-          <!-- <h1 class="text-4xl">Connect with me</h1> -->
-
           <div class="flex my-5 gap-32 justify-center">
             <div class="my-2">
               <img class="w-80" src="/assets/connect_with_me_2.png" />

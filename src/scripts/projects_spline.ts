@@ -14,20 +14,6 @@ export default () => {
     app
       .load("https://prod.spline.design/gAkqjhMCFVJZ0ZO2/scene.splinecode")
       .then(() => {
-        function setZoomBasedOnScreenSize(
-          app: Application,
-          canvas: HTMLCanvasElement
-        ) {
-          const width = canvas.getBoundingClientRect().width;
-
-          // app.setZoom(0.5);
-        }
-
-        window.addEventListener("resize", (e) => {
-          setZoomBasedOnScreenSize(app, canvas);
-        });
-
-        setZoomBasedOnScreenSize(app, canvas);
         resolve(true);
       });
   });

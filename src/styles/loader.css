@@ -2,13 +2,7 @@
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/18515/PIA09959-1280x800_copy.jpg);
   background-size: cover;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  /* overflow: hidden; */
-}
+
 #loader {
   height: 100%;
   width: 100%;

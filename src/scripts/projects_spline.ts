@@ -6,20 +6,29 @@ export default () => {
     console.error("canvas for spline not found");
     return;
   }
+  console.log("1");
 
   return new Promise((resolve) => {
     const app = new Application(canvas);
 
-    app.load("/projects/scene.splinecode").then(() => {
-      console.log("Das2");
+    app
+      .load("https://prod.spline.design/gAkqjhMCFVJZ0ZO2/scene.splinecode")
+      .then(() => {
+        function setZoomBasedOnScreenSize(
+          app: Application,
+          canvas: HTMLCanvasElement
+        ) {
+          const width = canvas.getBoundingClientRect().width;
 
-      app.addEventListener("mouseHover", (e) => {
-        console.log("I have been hovered!", e);
+          // app.setZoom(0.5);
+        }
+
+        window.addEventListener("resize", (e) => {
+          setZoomBasedOnScreenSize(app, canvas);
+        });
+
+        setZoomBasedOnScreenSize(app, canvas);
+        resolve(true);
       });
-      app.addEventListener("mouseDown", (e) => {
-        console.log("I have been clicked!", e);
-      });
-      resolve(true);
-    });
   });
 };

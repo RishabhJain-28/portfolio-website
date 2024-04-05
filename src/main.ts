@@ -12,8 +12,8 @@ import project_spline from "./scripts/projects_spline";
 
 async function main() {
   // await setupLoader();
-  await project_spline();
   // await completeLoader();
+  project_spline();
   headingAnimation();
   skills();
   expirenceComp();

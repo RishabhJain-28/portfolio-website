@@ -4,3 +4,4 @@ z 0
 
 
 yellow: 94925C
+zoom at 36% for fullsacreen

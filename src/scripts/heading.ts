@@ -38,6 +38,12 @@ const alphabet = [
 ];
 const ANIMATION_TIME = 470;
 export default () => {
+  // slider setup
+  const photoContainerDiv = document.getElementById("photoContainer");
+  if (photoContainerDiv) {
+    photoContainerDiv.style.animation = "slideIn 2s normal  1 forwards";
+  }
+
   let letter_count = 0;
   const headingEl = document.getElementById("hacker_anim_h1") as HTMLDivElement;
   const word = headingEl.innerHTML.trim();

@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    SPLINE_LOADED: boolean;
+  }
+}
+
 export type Expirence = {
   title: string;
   from: string;

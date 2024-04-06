@@ -49,8 +49,6 @@ body {
 #photoContainer {
   left: 999px;
   position: relative;
-  animation: slideIn 2s normal 2s 1 forwards;
-  /* animation: alternate; */
 }
 
 @keyframes slideIn {

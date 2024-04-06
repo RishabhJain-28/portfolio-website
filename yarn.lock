@@ -264,17 +264,10 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.9.6.tgz#2c1fb69e02a3f1506f52698cfdc3a8b6386df9a6"
   integrity sha512-jqzNLhNDvIZOrt69Ce4UjGRpXJBzhUBzawMwnaDAwyHriki3XollsewxWzOzz+4yOFDkuJHtTsZFwMxhYJWmLQ==
 
-"@splinetool/loader@^1.0.86":
-  version "1.0.91"
-  resolved "https://registry.yarnpkg.com/@splinetool/loader/-/loader-1.0.91.tgz#59d632a1669c299da2a5d190ec2497b6035cae79"
-  integrity sha512-+Nb6QWM28nApCzG9gkwg6G4/uOw4R/kkeBBWI+VivN3Cn1hRaj7ed5Ejvy/Dda+hBUO17aZcwdu9Lzt3W+xp4g==
-  dependencies:
-    semver-compare "^1.0.0"
-
-"@splinetool/runtime@^1.0.86":
-  version "1.0.91"
-  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-1.0.91.tgz#c6aef709d7c0596fb22b917090656748056d899f"
-  integrity sha512-K/JEMJpg7JOfPssY81+R28Znq/JWqa4FK+llCpvh382GageimUByWhxLGE5LvIqJoZ0OzpTB6jEm2DneIoOmGw==
+"@splinetool/runtime@^1.0.93":
+  version "1.0.93"
+  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-1.0.93.tgz#b0e49b7fe07135cd2b20dbca94f68dfda996b26b"
+  integrity sha512-hNe9VVcUjLSxKsxTaGmSwhC0RQzkNlpz44unCh7EINMugqZGZ+PDpZw36st14NHdnZ7Lmz13y6Mj4Koln53wgg==
   dependencies:
     on-change "^4.0.0"
     semver-compare "^1.0.0"

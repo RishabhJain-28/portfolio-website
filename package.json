@@ -17,11 +17,11 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@splinetool/loader": "^1.0.86",
-    "@splinetool/runtime": "^1.0.86",
+    "@splinetool/runtime": "^1.0.93",
     "@types/three": "0.150.0",
     "three": "0.150.0",
     "tsparticles-engine": "^2.2.4",
     "vite-plugin-minify": "^1.5.2"
-  }
+  },
+  "typings": "global.d.ts"
 }

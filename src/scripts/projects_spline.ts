@@ -24,18 +24,27 @@ const projects: {
 let selectedProject: SplineProject | null = null;
 
 export default () => {
+  // var worker = new Worker("worker.js");
+  // worker.addEventListener("message", function (e) {
+  //   console.log(e.data);
+  // });
+  // worker.postMessage("Happy Birthday");
   const canvas = document.getElementById("canvas3d") as HTMLCanvasElement;
 
   if (!canvas) {
     console.error("canvas for spline not found");
     return;
   }
-
   return new Promise((resolve) => {
-    const app = new Application(canvas);
+    const app = new Application(canvas, {
+      // renderMode: "",
+    });
+    app.setUIWasmUrl("/assets/process.wasm");
     app
-      .load("https://prod.spline.design/gAkqjhMCFVJZ0ZO2/scene.splinecode")
+      .load("https://prod.spline.design/N44PWr450iSeMm8Q/scene.splinecode")
       .then(() => {
+        console.log("load done");
+        window.SPLINE_LOADED = true;
         selectedProject = projects[BOLT_OBJECT_ID]; //TODO CHANGE
         app.addEventListener("mouseDown", (e) => {
           //? ignore scene clicks ?

@@ -1,7 +1,6 @@
 export default () => {
   let count = 0;
-  const body = document.getElementsByTagName("body")[0];
-  body.style.overflow = "hidden";
+
   const loaderDiv = document.getElementById("loader");
   if (!loaderDiv) {
     console.log("loader fdiv not found");
@@ -22,7 +21,7 @@ export default () => {
       } else {
         resolve(true);
         const loadingScreen = document.getElementById("loaderScreen");
-        body.style.overflow = "auto";
+
         //TODO intstead of remove desolve and remove
         loadingScreen?.remove();
       }

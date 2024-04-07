@@ -12,6 +12,8 @@ async function main() {
   project_spline();
   await setupLoader();
   headingAnimation();
+  const body = document.getElementsByTagName("body")[0];
+  body.style.overflow = "auto";
   skills();
   expirenceComp();
   setupCopyEmail();

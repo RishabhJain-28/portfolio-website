@@ -9,8 +9,16 @@ import skills from "./scripts/skills";
 import project_spline from "./scripts/projects_spline";
 
 async function main() {
-  project_spline();
-  await setupLoader();
+  if (true) {
+    project_spline();
+    await setupLoader();
+  } else {
+    const loadingScreen = document.getElementById("loaderScreen");
+
+    //TODO intstead of remove desolve and remove
+    loadingScreen?.remove();
+  }
+
   headingAnimation();
   const body = document.getElementsByTagName("body")[0];
   body.style.overflow = "auto";

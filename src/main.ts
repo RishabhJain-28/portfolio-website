@@ -10,7 +10,9 @@ import project_spline from "./scripts/projects_spline";
 
 async function main() {
   if (true) {
-    project_spline();
+    project_spline()?.catch(() => {
+      alert("failed to load spline");
+    });
     await setupLoader();
   } else {
     const loadingScreen = document.getElementById("loaderScreen");

@@ -26,6 +26,12 @@ body {
   margin: 30px;
 }
 
+@media screen and (max-width: 515px) {
+  .tag {
+    margin: 0;
+  }
+}
+
 .customScroll::-webkit-scrollbar {
   width: 5px;
 }

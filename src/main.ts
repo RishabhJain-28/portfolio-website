@@ -1,6 +1,5 @@
 import "./styles/index.css";
 import "./styles/header.css";
-import "./styles/projects.css";
 
 import setupLoader from "./scripts/loader";
 import headingAnimation from "./scripts/heading";
